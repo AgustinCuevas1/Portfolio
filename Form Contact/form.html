@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+           <nav class="nav">
+        <div>
+            <ul class="nav__ul">
+                <li class="nav__item"><a class="nav__link link--back" href="../index.html">Volver</a></li>
+            </ul>
+        </div>
+        <div>
+            <img class="nav__img" src="../IMGs/navbar icon.png" alt="">
+        </div>     
+    </nav>
+    </header>
+    <main>
+        <div class="contenedor_h1">
+            <h1>Formulario De Contacto<span class="guion_parpadeo">|</span></h1>
+        </div>
+        <!-- APARTADO DE HABILIDADES -->
+        <section class="contenedor_form">
+            <div> 
+               <form class="form">
+                <fieldset class="form__fieldset">
+                    <legend> Informacion General</legend>
+                    <label for="#name" class="form__label">Nombre Completo</label>
+                        <input type="text" id="name" class="form__item" placeholder="Juan Gomez" title="Escribe tu Nombre Completo" alt="apartado para escribir tu nombre completo" required>
+                    <label for="#email" class="form__label">Correo Electronico</label>
+                        <input type="email" id="email" class="form__item" placeholder="Ejemplo@gmail.com" required>
+                    <label for="" class="form__label">Tipo</label>
+                    <select id="" class="form__item" required>
+                        <option value="Empresa">Empresa</option>
+                        <option value="Comercio">Comercio</option>
+                        <option value="Particular">Particular</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend>Descripcion</legend>   
+                    <label for="" class="form__label">Motivo</label>
+                        <select id="" class="form__item" required>
+                            <option value="Personal">Personal</option>
+                            <option value="Laboral">Laboral</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    <label for="#textarea" class="form__label">Mensaje</label>
+                        <textarea id="textarea" class="form__item item--textarea" placeholder="Escribe tu Mensaje"></textarea>
+                </fieldset>
+                <input type="submit" class="submit_buttom" >         
+    
+               </form>
+            </div>
+        </section>        
+    </main>
+    <footer class="footer">
+        <p class="footer__text">© 2026 Pagina desarrollada por Agustín E. Cuevas desde Argentina!. Todos los derechos reservados.</p>
+    </footer>        
+</body>
+</html>
