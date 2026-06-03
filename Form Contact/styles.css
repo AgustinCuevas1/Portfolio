@@ -14,61 +14,126 @@ body {
     color: rgba(0, 0, 0, 0.89);
 }
 
+h1 {
+    font-family: "Fjalla one";
+}
+
+h2 {
+    font-size: 40px;
+    font-family: "Fjalla One", 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2:not(h1 + h2) {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: "Oswald";
+}
+
+h2, h3, p {
+    text-align: center;
+}
+
+p {
+    font-family: sans-serif;
+}
 
 
-@keyframes slideDownFromTop {
-  0% {
+.fjalla-one-regular {
+    font-family: "Fjalla One", 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oswald-clasic {
+    font-family: "Oswald", 'Courier New', Courier, monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
     opacity: 0;
-    transform: translateY(-100%); 
-  }
-  100% {
+    transform: translateX(100%);
+}
+
+
+    100% {
     opacity: 1;
-    transform: translateY(0);    
+    transform: translateX(0); 
 }
 }
+
 
 header {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
     animation: slideDownFromTop 0.8s ease-out forwards;
-    background-color: white;
+}
+
+
+.nav {
+    background-color: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    border-bottom: 1px solid rgb(217, 215, 215); 
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(217, 215, 215, 0.26); 
     box-shadow: 0px 0px 20px black;
     position: sticky;
     top: 0;
     z-index: 3;
 }
 
-.nav {
-    display: flex;
-    
+.nav__ul {
+
 }
 
-
 .nav__item {
-    margin-top: 10px;
-    display: block;
+    display: inline-block;
     padding: 20px 20px;
     flex: 1;
 }
 
 .nav__link {
     text-decoration: none;
-    color: black;
+    color: white; 
     font-weight: bolder;
     padding: 10px;
+    margin: 20px 20px;
     border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: transparent;
+    border-radius: 20px;
+    background-color: rgb(12, 5, 88);
+    color: rgb(223, 223, 223);
+    transition: box-shadow .6s, border .3s, background-color .3s, color .3s;
     transition: border .3s, background-color .3s, color .3s;
+
 }
 
+.nav__link:hover {
+    border: 1px solid rgba(255, 255, 255, 0.575);
+    border-radius: 130px;
+    background-color: rgb(12, 5, 88);
+    color: rgb(223, 223, 223);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.555);
+}
 
 .nav__img {
+    margin-top: 2px;
     margin-right: 20px;
-    max-width: 80px;
+    max-width: 100px;
+    max-height: 70px;
     flex: 1 0 0 auto;
 }
 
@@ -83,7 +148,7 @@ header {
 }
 
 .link--back:hover {
-    border: 1px solid white;
+    border: 1px solid transparent;
     border-radius: 130px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
