@@ -2,11 +2,35 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease, opacity .35s ease;
 }
-
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    animation: fadeInPage 0.8s ease-out both;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes softFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body {
@@ -99,10 +123,11 @@ p {
     width: 100%;
     text-align: right;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.048);
+    background-color: rgba(255, 255, 255, 0.029);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: .01px solid rgba(211, 208, 208, 0.26);
+    border-bottom: .01px solid rgba(211, 208, 208, 0.124);
+
     position: relative;
     z-index: 4;    
 }
@@ -120,9 +145,10 @@ p {
 .header {
     height: 100vh;
     background-image: url("./IMGs/background_header.jpg");
-    box-shadow:  0px 0px 100px black;
+    box-shadow:  0px 20px 10px rgba(0, 0, 0, 0.604);
     background-size: cover;
     display: flex;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 .overlay {
@@ -142,6 +168,7 @@ p {
     position: relative;
     z-index: 2;
     overflow: hidden;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 
@@ -212,20 +239,20 @@ h2 {
 .nav {
     position: relative;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     animation: slideDownFromTop 0.8s ease-out forwards;
 }
 
 .nav {
-    background-color: rgba(255, 255, 255, 0.041);
+    background-color: rgba(255, 255, 255, 0.012);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(217, 215, 215, 0.26); 
-    box-shadow: 0px 0px 20px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.149); 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     position: sticky;
     top: 0;
     z-index: 3;
@@ -298,6 +325,7 @@ h2 {
     border: 1px solid rgba(0, 0, 0, 0.158);
     border-radius: 10px;
     box-shadow: 0px 0px 20px black;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 section {
@@ -311,24 +339,27 @@ section {
     justify-content: space-around;
     grid-template-columns: 250px 250px 250px;
     padding: 50px 0px;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 .grid__img {
     display: inline-block;
     max-width: 250px;
     padding: 40px;
-    border: 2px solid rgba(23, 5, 88, 0.349);
+    border: 2px solid rgba(23, 5, 88, 0.082);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.733);
     background: rgba(0, 0, 0, 0.055);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: padding .3s, box-shadow .3s;
+    transition: padding .3s, box-shadow .3s, border .3s, transform .3s;
 }
 
 .grid__img:hover {
     padding: 30px;
     box-shadow: 0 0 30px rgb(12, 5, 88);
+    border: 2px solid rgba(23, 5, 88, 0.798);   
+    transform: translateY(-3px);
 }
 
 .grid__h3 {
@@ -341,22 +372,25 @@ section {
     justify-content: space-around;
     grid-template-columns: 40% 40%;
     margin-bottom: 80px;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 .section_responsive__container {
     display: grid;
-    border: 2px solid rgba(23, 5, 88, 0.349);
+    border: 2px solid rgba(23, 5, 88, 0.076);
     border-radius: 20px;
     padding: 20px ;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 30px black;
-    transition: padding .3s, box-shadow .3s;
+    transition: padding .3s, box-shadow .3s, border .3s, transform .3s;
 }
 
 .section_responsive__container:hover {
         padding: 22px 0px;
         box-shadow: 0 0 30px rgb(12, 5, 88);
+        border: 2px solid rgba(23, 5, 88, 0.882);
+        transform: translateY(-2px);
 }
 
 .section_responsive__img {
@@ -372,16 +406,11 @@ section {
 }
 
 
-
-
-
-
-
-
 .section_empresas {
     display: grid;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    animation: softFadeUp 0.9s ease-out both;
 }
 
 .container__empresas {
@@ -401,7 +430,7 @@ section {
     color: rgb(223, 223, 223);
     font-weight: bolder;
     cursor: pointer;
-    transition: box-shadow .3s, border .3s, background-color .3s;
+    transition: box-shadow .3s, border .3s, background-color .3s, transform .3s;
 }
 
 .section_empresas__link:hover {
@@ -409,29 +438,76 @@ section {
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    transform: translateY(-2px);
 }
 
+
 .section_projects__grid {
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 20em 20em;
+    grid-template-columns: 20em 20em 20em;
+    grid-template-rows: auto auto;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     min-width: 10em;
-    gap: 20px;
+    gap: 40px;
+    animation: softFadeUp 0.9s ease-out both;
+}
+
+.section_project__container {
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    border: 2px solid rgba(23, 5, 88, 0.349);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px black; 
+    transition: box-shadow .3s, transform .3s;
+}
+
+
+.section_project__container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgb(12, 5, 88);
+}
+
+.container__overlay {
+    color: transparent;
+    padding: 4em 0px;
+    min-width: 20.1em;
+    min-height: 10em;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.container__overlay:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.768)
+}
+
+.container__overlay > h3 {
+    font-size: 2em;
 }
 
 .section_projects__item {
-    display: grid;
-    border: 2px solid rgba(23, 5, 88, 0.349);
-    border-radius: 20px;
-    padding: 20px ;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 30px black;
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    padding: 20px;
+
 }
 
-
+.container--km {
+    background-image: url("./IMGs/KeanuModa.png");
+    background-size: cover;
+    background-position: center;
+}
 
 
             /* --- FOOTER SECTION --- */
@@ -444,4 +520,5 @@ section {
     width: 100%;
     padding: 25px;
     border-top: 1px solid rgba(0, 0, 0, 0.281);
+    animation: softFadeUp 0.9s ease-out both;
 }
