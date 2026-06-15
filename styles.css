@@ -383,13 +383,18 @@ section {
     display: grid;
     border: 2px solid rgba(23, 5, 88, 0.076);
     border-radius: 20px;
-    padding: 20px ;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 30px black;
-    transition: padding .3s, box-shadow .3s, border .3s, transform .3s ease;
+    transition: box-shadow .3s, border .3s, transform .3s !important;
 }
 
+.section_responsive__container:hover {
+        box-shadow: 0 0 30px rgb(12, 5, 88);
+        border: 2px solid rgba(23, 5, 88, 0.882);
+        transform: translateY(-2px);
+}
 
 .section_responsive__img {
     display: block;
@@ -574,12 +579,18 @@ section {
 @media screen and (max-width: 599px) {
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 2px;
 }
 
-span h2 {
-    font-size: 0.1rem;
+.h2dwf {
+    font-size: 1.9rem;
+}
+
+.h3slogan {
+    margin: 0 0rem;
+    font-size: 1.5rem;
+    font-weight: 100;
 }
 
 .contact__section {
@@ -653,23 +664,26 @@ span h2 {
 }
 
 .section_skills__grid {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
     display: grid;
-    grid-template-columns: 100px;
+    grid-template-columns: 5rem 5rem 5rem;
     gap: 1rem;
     padding: 40px 0;
     animation: softFadeUp 0.9s ease-out both;
+    border-bottom: 1px solid white;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 1px;
 }
 
 .grid__img {
     display: block;
     max-width: 100%;
-    padding: 20px;
+    padding: 10px;
     margin: 0 auto;
 }
 
 .grid__img:hover {
-    padding: 20px;
+    padding: 8px;
     box-shadow: 0 0 30px rgb(12, 5, 88);
     border: 2px solid rgba(23, 5, 88, 0.798);
     transform: translateY(-3px);
@@ -681,7 +695,7 @@ span h2 {
 
 .section_responsive {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 3rem;
 }
 
 .section_responsive__container {
@@ -689,14 +703,8 @@ span h2 {
     padding: 1.5rem;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease;
+    
 }
-
-.section_responsive__container:hover {
-    padding: 1.3rem;
-    
-}    
-    
 
 .section_responsive__img {
     padding: 0;
@@ -704,7 +712,11 @@ span h2 {
     width: 100%;
     max-width: 100%;
     max-height: none;
-    transition: all .3s ease;
+}
+
+.section_projects h2 {
+    font-size: 3rem;
+
 }
 
 .section_projects__grid {
@@ -722,6 +734,7 @@ span h2 {
 .container__overlay {
     min-width: auto;
     min-height: auto;
+    padding: 2rem 1.5rem;
 }
 
 .section_aboutme {
@@ -740,6 +753,10 @@ span h2 {
 
 .footer {
     padding: 20px 15px;
+}
+
+.acercademih2 {
+    font-size: 2.3rem;
 }
 
 }
