@@ -27,43 +27,34 @@
         </div>     
     </nav>
     </header>
-    <main>
-        <div class="contenedor_h1">
+    <main class="main">
+    <div class="container">
+            <div class="contenedor_h1">
             <h1>Formulario De Contacto<span class="guion_parpadeo">|</span></h1>
         </div>
-        <!-- APARTADO DE HABILIDADES -->
-        <section class="contenedor_form">
-            <div> 
-               <form class="form">
-                <fieldset class="form__fieldset">
-                    <legend> Informacion General</legend>
-                    <label for="#name" class="form__label">Nombre Completo</label>
-                        <input type="text" id="name" class="form__item" placeholder="Juan Gomez" title="Escribe tu Nombre Completo" alt="apartado para escribir tu nombre completo" required>
-                    <label for="#email" class="form__label">Correo Electronico</label>
-                        <input type="email" id="email" class="form__item" placeholder="Ejemplo@gmail.com" required>
-                    <label for="" class="form__label">Tipo</label>
-                    <select id="" class="form__item" required>
-                        <option value="Empresa">Empresa</option>
-                        <option value="Comercio">Comercio</option>
-                        <option value="Particular">Particular</option>
-                    </select>
-                </fieldset>
-                <fieldset class="form__fieldset">
-                    <legend>Descripcion</legend>   
-                    <label for="" class="form__label">Motivo</label>
-                        <select id="" class="form__item" required>
-                            <option value="Personal">Personal</option>
-                            <option value="Laboral">Laboral</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    <label for="#textarea" class="form__label">Mensaje</label>
-                        <textarea id="textarea" class="form__item item--textarea" placeholder="Escribe tu Mensaje"></textarea>
-                </fieldset>
-                <input type="submit" class="submit_buttom" >         
-    
-               </form>
-            </div>
-        </section>        
+        <form>
+            <fieldset class="form__fieldset">
+                <legend class=>INFORMACION PERSONAL</legend>
+                <label for="">Nombre Completo</label>
+                <input type="text" class="form__input" placeholder="Jhon Doe">
+                <label for="">Correo Electronico</label>
+                <input type="email" class="form__input" placeholder="Ejemplo@gmail.com">
+                <label for="">Tipo</label>
+                <select name="" id="" class="form__input">
+                    <option value="emprise">Empresa</option>
+                    <option value="comerce">Comercio</option>
+                    <option value="independence">Independiente</option>
+                    <option value="other">Otro</option>
+                </select>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class=>MENSAJE</legend>
+                <label for="">Contactate conmigo!</label>
+                <textarea name="" id="" class="form__textarea" placeholder="Deja tu mensaje"></textarea>
+            </fieldset>
+            <input type="submit" type="buttom" class="btn-submit">
+        </form>
+    </div>
     </main>
     <footer class="footer">
         <p class="footer__text">© 2026 Pagina desarrollada por Agustín E. Cuevas desde Argentina!. Todos los derechos reservados.</p>

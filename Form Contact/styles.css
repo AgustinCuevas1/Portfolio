@@ -11,7 +11,10 @@ html {
 body {
     margin: 0;
     background-color: rgb(0, 10, 69);
-    color: rgba(0, 0, 0, 0.89);
+    color: aliceblue;
+    background-image: url(../IMGs/backform.avif);
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {
@@ -96,10 +99,6 @@ header {
     z-index: 3;
 }
 
-.nav__ul {
-
-}
-
 .nav__item {
     display: inline-block;
     padding: 20px 20px;
@@ -156,14 +155,8 @@ header {
 }
 
 .contenedor_h1 {
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(255, 251, 251, 0.303);
-    padding: 10px;
-    width: 500px;
-    margin: auto;
-    margin-top: 100px;
+    margin-top: 2rem;
     text-align: center;
-    background-color: rgb(229, 229, 229);
 }
 
 h1 {
@@ -183,98 +176,106 @@ h1 {
     50% { opacity: 0;}
 }
 
-.contenedor_form {
+main {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(255, 251, 251, 0.303);
-    width: 550px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(255, 255, 255, 0.507);
+    border-radius: 10px;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    background-color: rgb(229, 229, 229);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.068);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 form {
-    padding-left: 25px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    width: 450px;
-}
-
-.form__item {
-    width: 100%;
-    padding: 4px;
-    margin: 10px 4px;
-    border: none;
-    border-left: 2px solid rgba(0, 0, 0, 0.89);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.89);
-    border-radius: 4px;
-    background-color: transparent;
-}
-
-::placeholder{
-    color: rgba(0, 0, 0, 0.661);
-}
-
-.form__label, legend {
-    font-family: monospace;
-    font-size: 16px;
-    font-weight: bolder;
-}
-
-.form__label {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
 }
 
 .form__fieldset {
-    width: 100%;
-    border: 2px solid rgb(5, 5, 5);
-    padding: 30px;
-    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.507);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
 
+label {
+    font-size: 1.2rem;
+}
+
+.form__input, .form__textarea {
+    margin: 0.4rem 0rem;
+    padding: 0.4rem;
+    width: 100%;
+}
+
+.form__input::placeholder {
+    color: rgba(0, 0, 0, 0.712);
+}
+.form__textarea::placeholder {
+    color: rgba(0, 0, 0, 0.712);
+}
+.form__input:focus {
+    border: 3px solid rgba(0, 0, 0, 0.281);
+    outline: white;
+}
+.form__textarea:focus {
+    border: 3px solid rgba(0, 0, 0, 0.281);
+    outline: white;
+}
+
+.form__textarea {
+    resize: none;
+    min-height: 7rem;
 }
 
 legend {
-    padding: 0 20px;
-    text-transform: uppercase;
-
+    padding: 0rem 1rem;
 }
 
-.item--textarea {
-    max-width: 350px;
-    min-width: 350px;
-    min-height: 100px;
-    max-height: 100px;
+select {
+    width: 80%;
 }
 
-.submit_buttom {
-    display: block;
-    margin: auto;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    background-color: rgb(12, 5, 88);
-    color: rgb(223, 223, 223);
+.btn-submit {
     cursor: pointer;
-    transition: box-shadow .3s, border .3s, background-color .3s, color .3s;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    font-weight: bolder;
+    transition: box-shadow .3s ease, transform .3s ease;
 }
 
-.submit_buttom:hover {
-        border: 1px solid white;
-    border-radius: 130px;
-    background-color: rgb(12, 5, 88);
-    color: rgb(223, 223, 223);
-    box-shadow: 0px 0px 15px black;
+.btn-submit:hover {
+    margin-bottom: 0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.207);
+    transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.btn-submit:active {
+    color: aliceblue;
 }
 
 
 .footer {
+    position: relative;
+    bottom: 0;
     text-align: center;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.641);
-    background-color: rgb(0, 8, 52);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     padding: 25px;
     border-top: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+*::placeholder {
+    font-family: sans-serif;
 }
