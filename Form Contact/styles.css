@@ -85,7 +85,8 @@ header {
 
 
 .nav {
-    background-color: rgba(255, 255, 255, 0.041);
+    padding: .5rem;
+    background-color: rgba(0, 10, 69, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -93,6 +94,8 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(217, 215, 215, 0.26); 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-shadow: 0px 0px 20px black;
     position: sticky;
     top: 0;
@@ -112,17 +115,16 @@ header {
     padding: 10px;
     margin: 20px 20px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     transition: box-shadow .6s, border .3s, background-color .3s, color .3s;
     transition: border .3s, background-color .3s, color .3s;
-
 }
 
 .nav__link:hover {
     border: 1px solid rgba(255, 255, 255, 0.575);
-    border-radius: 130px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.555);
@@ -140,7 +142,7 @@ header {
     margin: 20px 20px;
     padding: 10px 20px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     transition: box-shadow .3s, border .3s, background-color .3s, color .3s;
@@ -148,7 +150,7 @@ header {
 
 .link--back:hover {
     border: 1px solid transparent;
-    border-radius: 130px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     box-shadow: 0px 0px 15px black;
@@ -320,11 +322,18 @@ select {
     font-family: sans-serif;
 }
 
+@media screen and (max-width:599px) {
+
+    h1 {
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width:768px) {
 
 
     h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: 1rem 0 0 0;
         padding: 0;
     }
@@ -413,14 +422,14 @@ select {
         font-size: 1rem;
         border: 1px solid #ccc;
         border-radius: 4px;
-    }
+}
 
     select:focus {
         border: 2px solid blue;
         outline: none;
-    }
+}
 
-    .btn-submit {
+.btn-submit {
         margin: 1rem auto 0;
         padding: 0.75rem 2rem;
         font-size: 1rem;
@@ -430,24 +439,24 @@ select {
         color: white;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    }
+}
 
-    .btn-submit:hover {
+.btn-submit:hover {
         background-color: rgb(30, 10, 150);
         transform: none;
-    }
+}
 
-    .btn-submit:active {
+.btn-submit:active {
         background-color: rgb(10, 5, 70);
-    }
+}
 
-    .footer {
+.footer {
         font-size: 12px;
         padding: 15px;
-    }
+}
 
-    .footer__text {
+.footer__text {
         font-size: 0.85rem;
-    }
+}
 
 }

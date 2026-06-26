@@ -9,7 +9,8 @@ html {
 }
 
 body {
-    background-color: rgb(0, 10, 69);
+    background-image: url(../IMGs/backform.avif);
+    background-size: cover;
     color: rgba(238, 238, 238, 0.89);
 }
 
@@ -20,13 +21,13 @@ strong {
 
 h1 {
     font-family: "Fjalla One", 'Courier New', Courier, monospace;
-    font-weight: 400;
     font-style: normal;
     font-size: 60px;
     font-weight: 900;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     text-transform: uppercase;
-    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(12, 5, 88);
 }
 
 h2 {
@@ -85,14 +86,17 @@ header {
 
 
 .nav {
-    background-color: rgba(255, 255, 255, 0.041);
+    padding: .5rem;
+    background-color: rgba(0, 10, 69, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(217, 215, 215, 0.26); 
+    border-bottom: 1px solid rgba(217, 215, 215, 0.26);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
     box-shadow: 0px 0px 20px black;
     position: sticky;
     top: 0;
@@ -113,7 +117,7 @@ header {
     padding: 10px;
     margin: 20px 20px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     transition: box-shadow .6s, border .3s, background-color .3s, color .3s;
@@ -123,7 +127,7 @@ header {
 
 .nav__link:hover {
     border: 1px solid transparent;
-    border-radius: 130px;
+    border-radius: 10px;
     background-color: rgb(12, 5, 88);
     color: rgb(223, 223, 223);
     box-shadow: 0px 0px 15px black;
@@ -140,12 +144,12 @@ header {
 .main__container {
     text-align: center;
     justify-content: center;
-    padding: 100px;
+    padding: 90px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: rgba(10, 10, 10, 0.89);
-    width: 95%;
+    background-color: rgba(10, 10, 10, 1);
+    width: 90%;
     border: 1px solid rgba(0, 0, 0, 0.158);
     border-radius: 10px;
     box-shadow: 0px 0px 20px black;
@@ -154,7 +158,8 @@ header {
 
 
 .footer {
-    font-size: 14px;
+    font-family: sans-serif;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.641);
     background-color: rgb(0, 8, 52);
     width: 100%;
